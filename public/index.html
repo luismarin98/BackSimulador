@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimuladorApi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./Js/index.js"></script>
+    <div id="linkdiv"></div>
+</head>
+
+<body class="bg-neutral-800 text-white w-screen h-screen flex items-center justify-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+        <div class="w-full h-full flex justify-center items-center flex-col gap-4 p-6">
+            <div class="flex flex-col md:flex-row gap-3 items-center justify-center">
+                <p class="text-3xl flex flex-row items-center gap-2"><span class="font-semibold">SimuladorApi -
+                        DOCS</span> <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-code">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 8l-4 4l4 4" />
+                            <path d="M17 8l4 4l-4 4" />
+                            <path d="M14 4l-4 16" />
+                        </svg></span></p>
+                <p class="text-lg text-center">Inicia añadiendo la uri de la api en el archivo .env.local y luego lo llamas usando dotenv.config()</p>
+            </div>
+            <div class="w-full h-full flex flex-col gap-4 justify-between items-center">
+                <h1 class="text-lg font-semibold">Lista de las capacidades de la api</h1>
+                <div class="w-full flex flex-col gap-2 justify-between items-center">
+                    <p class="text-md uppercase">Metodo <span
+                            class="bg-blue-500 py-1 px-6 rounded-md text-white">GET</span></p>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 w-5/6 p-3 rounded-lg"
+                        id="fileListGet"></ul>
+                </div>
+                <div class="w-full flex flex-col gap-2 justify-between items-center">
+                    <p class="text-md uppercase">Metodo <span
+                            class="bg-green-500 py-1 px-6 rounded-md text-black">POST</span></p>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 w-5/6 p-3 rounded-lg"
+                        id="fileListPost"></ul>
+                </div>
+                <div class="w-full flex flex-col gap-2 justify-between items-center">
+                    <p class="text-md uppercase">Metodo <span
+                            class="bg-yellow-500 py-1 px-6 rounded-md text-black">PUT</span></p>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 w-5/6 p-3 rounded-lg"
+                        id="fileListPut"></ul>
+                </div>
+                <div class="w-full flex flex-col gap-2 justify-between items-center">
+                    <p class="text-md uppercase">Metodo <span
+                            class="bg-red-500 py-1 px-6 rounded-md text-white">DELETE</span></p>
+                    <ul class="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 w-5/6 p-3 rounded-lg"
+                        id="fileListDelete"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
