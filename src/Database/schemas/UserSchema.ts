@@ -10,6 +10,6 @@ const UserSchema = new Schema<UserData>({
     nombres: { type: String, required: false },
     password: { type: String, required: false },
     username: { type: String, required: false }
-});
+}, { timestamps: true});
 
 export const UserModel = model<UserData>('User', UserSchema);

@@ -4,7 +4,7 @@ import { UserResponse } from "../../../Interfaces/User";
 
 export const delete_methods: MethodsParams[] = [
     {
-        capacity: '/user/:id',
+        capacity: '/delete/:id',
         method: "delete",
         promise: async (req, res) => {
             try {

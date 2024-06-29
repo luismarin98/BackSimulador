@@ -15,10 +15,10 @@ export const get_methods: MethodsParams[] = [
 
                 if (findUser) {
                     const userResponse: UserResponse = { msg: "Consulta exitosa", status: 200, user: findUser }
-                    res.sendStatus(userResponse.status).json(userResponse);
+                    res.status(userResponse.status).json(userResponse);
                 } else if (!findUser) {
                     const userResponse: UserResponse = { msg: "Sin Resultados", status: 404, user: undefined }
-                    res.sendStatus(userResponse.status).json(userResponse);
+                    res.status(userResponse.status).json(userResponse);
                 }
             } catch (error) {
                 const error_response: BadRequestResponse = { msg: "Error de servidor", status: 500, Error: error }
@@ -31,12 +31,12 @@ export const get_methods: MethodsParams[] = [
         method: "get",
         promise: async (req, res) => {
             try {
-                const lenghUseres = await UserModel.find();
+                const users = await UserModel.find();
 
-                if (lenghUseres.length > 0) {
-                    const userResponse: UserArrayResponse = { msg: "Consulta exitosa", status: 200, userArray: lenghUseres }
+                if (users.length >= 0) {
+                    const userResponse: UserArrayResponse = { msg: "Consulta exitosa", status: 200, userArray: users }
                     res.status(userResponse.status).json(userResponse);
-                } else if (lenghUseres.length < 0) {
+                } else if (users.length < 0) {
                     const userResponse: UserArrayResponse = { msg: "Sin Resultados", status: 404, userArray: undefined }
                     res.status(userResponse.status).json(userResponse);
                 }

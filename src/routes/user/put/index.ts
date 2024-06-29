@@ -4,7 +4,7 @@ import { UserResponse } from "../../../Interfaces/User";
 
 export const put_methods: MethodsParams[] = [
     {
-        capacity: '/user/:id',
+        capacity: '/update/:id',
         method: "put",
         promise: async (req, res) => {
             try {
