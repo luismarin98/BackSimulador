@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js --o",
-    "dev": "nodemon src/index.ts --o"
+    "dev": "nodemon src/index.ts --o clear"
   },
   "keywords": [
     "WebApiSimulador"
@@ -13,6 +13,7 @@
   "author": "AndyMDV",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

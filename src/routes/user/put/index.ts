@@ -12,6 +12,7 @@ export const put_methods: MethodsParams[] = [
 
                 if (findUser) {
                     await findUser.updateOne(req.body)
+                    await findUser.save()
                     const userResponse: UserResponse = { msg: "Actualizacion exitosa", status: 200, user: findUser }
                     res.status(userResponse.status).json(userResponse);
                 } else if (!findUser) {

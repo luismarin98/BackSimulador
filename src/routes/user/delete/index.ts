@@ -15,7 +15,7 @@ export const delete_methods: MethodsParams[] = [
                     res.status(userResponse.status).json(userResponse);
                 } else if (!findUser) {
                     await UserModel.deleteOne({ id: req.params.id });
-                    const userResponse: UserResponse = { msg: "Sin Resultados", status: 201, user: null }
+                    const userResponse: UserResponse = { msg: "Consulta exitosa", status: 201, user: null }
                     res.status(userResponse.status).json(userResponse);
                 }
             } catch {

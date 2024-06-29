@@ -1,5 +1,4 @@
 import { Request, Response, Router } from 'express';
-import { UserData } from '../Interfaces/User';
 
 type mehtods = 'get' | 'post' | 'put' | 'delete';
 
@@ -16,7 +15,7 @@ export interface FilesRequest {
 export interface MethodsParams {
     capacity: string;
     method: mehtods;
-    promise: (req: Request<UserData>, res: Response) => Promise<void>;
+    promise: (req: Request, res: Response) => Promise<void>;
 }
 
 export interface ApiRuta {

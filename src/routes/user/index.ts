@@ -14,15 +14,15 @@ post_methods.forEach(data => api_ruta[data.method](data.capacity, data.promise))
 
 export const user_routes: ApiRuta = { name: '/user', api_rutas: api_ruta }
 
-const getMethodsAndNames = () => {
-    const methods: FilesRequest[] = [];
+const getUserMethodsAndNames = () => {
+    const user_methods: FilesRequest[] = [];
 
-    get_methods.forEach(data => methods.push({ capacity: data.capacity, method: data.method }));
-    put_methods.forEach(data => methods.push({ capacity: data.capacity, method: data.method }));
-    delete_methods.forEach(data => methods.push({ capacity: data.capacity, method: data.method }));
-    post_methods.forEach(data => methods.push({ capacity: data.capacity, method: data.method }));
+    get_methods.forEach(data => user_methods.push({ capacity: data.capacity, method: data.method }));
+    put_methods.forEach(data => user_methods.push({ capacity: data.capacity, method: data.method }));
+    delete_methods.forEach(data => user_methods.push({ capacity: data.capacity, method: data.method }));
+    post_methods.forEach(data => user_methods.push({ capacity: data.capacity, method: data.method }));
 
-    return { methods }
+    return { user_methods }
 }
 
-export default getMethodsAndNames;
+export default getUserMethodsAndNames;

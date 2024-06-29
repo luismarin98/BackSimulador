@@ -7,3 +7,8 @@ export interface BadRequestResponse {
     status: StatusResponse;
     Error: unknown;
 }
+
+export interface RequestResponse {
+    msg: Responses;
+    status: StatusResponse;
+}
