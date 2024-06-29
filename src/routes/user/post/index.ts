@@ -9,7 +9,6 @@ export const post_methods: MethodsParams[] = [
         method: "post",
         promise: async (req, res) => {
             try {
-                console.log(req.body)
                 const findUser = await UserModel.findOne({ id: req.body.id });
 
                 if (findUser) {
