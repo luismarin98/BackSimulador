@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "build": "npx tsc",
-    "start": "nodemon src/index.js --o clear",
-    "dev": "nodemon src/index.ts --o clear"
+    "start": "nodemon src/index.js --o clear"
   },
   "keywords": [
     "WebApiSimulador"
