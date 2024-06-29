@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/index.js --o",
+    "start": "nodemon src/index.js --o clear",
     "dev": "nodemon src/index.ts --o clear"
   },
   "keywords": [
